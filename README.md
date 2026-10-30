@@ -170,3 +170,21 @@ En este taller se utilizará un 'framework' de persistencia. La base de datos qu
 ## Parte III (Opcional)
 
 Haga un “refactor” de su aplicación de dibujo trabajada en el Taller de MVC, para generar la opción de guardar el estado en una base de datos local y que a través del uso del patrón DAO, puedan extraer la información para cargar las líneas dibujadas. (Se pueden tener líneas precargadas de ejemplo).
+
+---
+
+## Créditos y uso académico
+
+**Autor:** César Augusto Vega Fernández  
+**Curso:** Diseño y Arquitectura de Software  
+**Programa:** Ingeniería Informática – Universidad de La Sabana
+
+### Licencia de uso
+
+Este material se distribuye bajo la licencia [Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es). El texto completo está en el archivo [`LICENSE`](LICENSE).
+
+Puedes **usar, adaptar o compartir** este contenido con fines educativos, siempre que:
+
+1. Se reconozca la autoría del profesor **César Augusto Vega Fernández**.
+2. No se utilice con fines comerciales.
+3. Las obras derivadas se distribuyan bajo la misma licencia.
