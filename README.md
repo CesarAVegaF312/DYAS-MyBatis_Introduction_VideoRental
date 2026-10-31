@@ -128,9 +128,15 @@ En este taller se utilizará un 'framework' de persistencia. La base de datos qu
     ...
     SqlSessionFactory sessionfact = getSqlSessionFactory();
     SqlSession sqlss = sessionfact.openSession();
-    ClientMapper cm=sqlss.getMapper(ClienteMapper.class);
-    System.out.println(cm.consultarClientes()));
+    ClienteMapper cm=sqlss.getMapper(ClienteMapper.class);
+    System.out.println(cm.consultarClientes());
     ...
+    ```
+
+    Para ejecutarlo desde la raíz del proyecto:
+
+    ```bash
+    mvn compile exec:java -Dexec.mainClass=edu.unisabana.dyas.samples.services.client.MyBatisExample
     ```
 
 ## Parte II 
@@ -166,6 +172,19 @@ En este taller se utilizará un 'framework' de persistencia. La base de datos qu
     ```
     
     Verifique el funcionamiento haciendo una consulta a través del 'mapper' desde MyBatisExample.
+
+## Criterios de evaluación
+
+* Configuración.
+	1. `mybatis-config.xml` registra los alias de tipos y los tres mappers, y `MyBatisExample` arranca sin errores de mapeo.
+* Mapeo.
+	1. Existen los `resultMap` de `Cliente`, `ItemRentado`, `Item` y `TipoItem`, con `id`, `result`, `association` y `collection` donde corresponde.
+	2. Las columnas de las tablas unidas con JOIN no se confunden entre sí (alias en la consulta y `columnPrefix` en el `resultMap`).
+	3. `ItemResult` está definido una sola vez, en `ItemMapper.xml`, y `ClienteMapper.xml` lo referencia (sin código repetido).
+* Funcionalidad.
+	1. Desde `MyBatisExample` funcionan `consultarClientes`, `consultarCliente`, `agregarItemRentadoACliente`, `insertarItem`, `consultarItem` y `consultarItems` sobre `bd.sqlite3`.
+* Implementación.
+	1. Los parámetros de las sentencias usan `#{...}`, nunca `${...}`, para evitar inyección SQL.
 
 ## Parte III (Opcional)
 
